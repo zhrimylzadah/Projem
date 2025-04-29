@@ -21,22 +21,171 @@
     {% block content %}
     <h2 class="main__title main__title--margin">Seçtiklerinle ilgili fikirler:</h2>
     <div class="main__rez" id="end">
-        {% if size == "1" and lights == "3" and device == "4" %}
-        <span>Doğa Bingo Oyunu Oyna: Önceden hazırlanmış bir kartta ağaç, kuş, çiçek gibi şeyleri bulup işaretle!</span>
-        <span>Eviniz enerji tüketimi konusunda son derece verimlidir!</span>
-        {%elif result > 150 and result < 300%}
-        <span>Sonucunuz {{result}} kWh</span>
-        <span>Evınızın enerji verimliliği orta düzeydedir!</span>
+        {% if result.size == 1 and result.lights == 5 and result.device == 7 %}
+        <span>~~Doğa Bingo Oyunu Oyna: Önceden hazırlanmış bir kartta ağaç, kuş, çiçek gibi şeyleri bulup işaretle!~~</span>
+        <span>~~Böcek Safari Yap: Merakla çimenleri ara, hangi böcekleri görebileceğini listele.~~</span>
+        <span>~~“En Yüksek Ağaç” Yarışı: Parkta ya da bahçede en uzun ağacı bulmaya çalış, etrafını sarıp ölç.~~</span>
         <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
-        <a href="{{ url_for('form') }}" class="main__link">Günlüğüm</a>
-        {%elif result >= 300%}
-        <span>Sonucunuz {{result}} kWh</span>
-        <span>Evınızın enerji verimliliği ortalamadan düşüktür!</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 2 and result.lights == 4 and result.device == 7 %}
+        <span>~~“Doğa Challenge” Başlat: 7 gün boyunca her gün bir doğa dostu hareket yap, sosyal medyada paylaş.~~</span>
+        <span>~~Doğa Rap’i Yaz: Geri dönüşüm, çevre temizliği ya da ormanları koruma hakkında eğlenceli bir rap şarkı yaz!~~</span>
+        <span>~~Kendin Yap Çevre Bulmacası: Çevreyle ilgili kavramlarla kendi çapraz bulmaca ya da kelime eşleştirme oyununuzu oluşturun.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 2 and result.lights == 5 and result.device == 8 %}
+        <span>~~Doğadaki Hayvan İzlerini Tanımayı Öğren: Toprakta, karda ya da çamurda hayvan izlerini gözlemle, internetten araştır.~~</span>
+        <span>~~Bitki Günlüğü Başlat: Gittiğin yerde gördüğün bitkileri not al, isimlerini öğren, hangi ayda çiçek açtıklarını keşfet.~~</span>
+        <span>~~Basit Doğal Yön Bulma Yöntemlerini Öğren: Güneşin ve gölgenin yönüne bakarak nasıl yön bulacağını öğren.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 3 and result.lights == 6 and result.device == 9 %}
+        <span>~~Kozalaktan Dekoratif Mumluk Yap: Bahçede veya parkta bulduğun kozalakları kullanarak doğal süs eşyaları oluştur.~~</span>
+        <span>~~Portakal Kabuğundan Mumluk Hazırla: Hem geri dönüşüm hem aromatik bir dekor.~~</span>
+        <span>~~Atık Kumaşlardan Bez Çanta Dik: Eski kıyafetleri değerlendir, doğa dostu çanta yap.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 1 and result.lights == 5 and result.device == 9 %}
+        <span>~~Doğa Kolajı Yap: Yaprak, çiçek, taş, dal gibi malzemeleri topla ve bir kartona yapıştırarak doğa tablosu hazırla.~~</span>
+        <span>~~Yaprak Baskısı Deneyin: Sonbaharda dökülen yaprakları boyayıp kağıda bastır, doğanın sanatını yansıt.~~</span>
+        <span>~~Kartonla Kelebek Yapalım: Kartonları kesip doğadaki renkli kelebekleri model alarak kendi versiyonunu tasarla.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 2 and result.lights == 6 and result.device == 7 %}
+        <span>~~Doğa Temalı DIY Oyun Yap: Kozalakları piyon, taşları zar gibi kullanarak kendi doğa oyununuzu tasarlayın.~~</span>
+        <span>~~Doğadan Çerçeve Yapımı: Dallar, kabuklar, taşlarla kendi fotoğraf çerçeveni oluştur.~~</span>
+        <span>~~Doğa Craft Yarışması Başlat: Arkadaşlarınla “doğadan en yaratıcı obje” yarışması yap, sosyal medyada paylaşın!~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 3 and result.lights == 4 and result.device == 8 %}
+        <span>~~Evde Doğal Temizlik Malzemeleri Yapmayı Öğren: Sirke, karbonat ve limonla çevre dostu temizlik ürünleri hazırla.~~</span>
+        <span>~~Karbon Ayak İzini Hesapla: Online araçlar kullanarak kendi ayak izinizi öğrenin ve azaltmak için adımlar planlayın.~~</span>
+        <span>~~Evde Sürdürülebilir Bahçe Planlaması Öğren: Az suyla büyüyen, yerli bitkilerle küçük bir ekosistem oluşturmayı öğrenin.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 1 and result.lights == 6 and result.device == 8 %}
+        <span>~~Meyve Kabuklarından Neler Yapılır Öğren: Portakal, limon kabuklarının nasıl kullanılabileceğini araştır – doğal kokular, çaylar, dekorlar.~~</span>
+        <span>~~Atık Nedir? Geri Dönüşüm Nedir? Çocuklar için hazırlanmış basit videolarla atık türlerini tanımayı öğren.~~</span>
+        <span>~~Plastik Şişe Nerelere Gider? Bir pet şişenin geri dönüşüm yolculuğunu çizgi hikaye ya da animasyonla izle.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 2 and result.lights == 4 and result.device == 9 %}
+        <span>~~Eski Tişörtlerden Bez Çanta Dik: Hiç dikiş makinesi gerekmeden, yalnızca kesip bağlayarak çanta yapabilirsin.~~</span>
+        <span>~~Doğal Sabun Yapımını Deneyimle: Lavanta, defne, zeytinyağı gibi doğal malzemelerle sabun üret.~~</span>
+        <span>~~Geri Dönüşümlü Kâğıtla Defter Yap: Eski defterlerin boş sayfalarını birleştirip kişisel doğa günlüğü oluştur.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 3 and result.lights == 5 and result.device == 7 %}
+        <span>~~Doğada Fotoğraf Yürüyüşü Yap: Çiçek, kuş, yaprak dokuları gibi detayları çek, sonra evde albüm haline getir.~~</span>
+        <span>~~Sessiz Yürüyüş Deneyimi: Bir saat boyunca doğada sadece dinleyerek ve gözlem yaparak yürü. Eğlenceli ve farkındalık dolu.~~</span>
+        <span>~~Doğa Pikniği + Mini Oyunlar: Evde kolay hazırlanabilecek doğa dostu atıştırmalıklarla piknik yap, taşlarla dama, dal parçalarıyla şekil tamamlama oyunu oyna.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 1 and result.lights == 4 and result.device == 9 %}
+        <span>~~Eski tişörtlerden torba yap: Kullanmadığın tişörtleri kesip bağlayarak alışveriş torbasına dönüştür.~~</span>
+        <span>~~Evde mini geri dönüşüm kutusu tasarla: Renkli kutularla kendi atık ayrıştırma sistemini kur.~~</span>
+        <span>~~Karton kutudan doğa dostu oyuncak yap: Kedi, ağaç, kuş gibi doğa temalı figürler tasarla.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 2 and result.lights == 5 and result.device == 7 %}
+        <span>~~Doğada Mini Oyun Turu Düzenle: Taşlarla hedef oyunu, ağaçlarla saklambaç, yapraklarla eşleştirme oyunu oyna.~~</span>
+        <span>~~Kuş Seslerini Tahmin Etme Oyunu Oyna: Telefonla kuş sesleri dinle, hangisi olduğunu bulmaya çalış.~~</span>
+        <span>~~“En Güzel Yaprak” Fotoğraf Yarışı Yap: Arkadaşlarınla parktaki en güzel yaprağı bulup çekin, oylayın.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 3 and result.lights == 6 and result.device == 8 %}
+        <span>~~Evde Kompost Yapımını Öğren: Organik atıkları toprağa kazandırmak için adım adım kompost yapmayı keşfet.~~</span>
+        <span>~~Geri dönüşüm sembollerini öğren: Hangi sembol ne anlama geliyor? Neler geri dönüştürülebilir?~~</span>
+        <span>~~“Sıfır Atık” kavramını araştır: Bu felsefeyi hayatına nasıl katabileceğini öğren.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 3 and result.lights == 4 and result.device == 9 %}
+        <span>~~Bez torbalar dikerek plastik kullanımını azalt: Kumaş artıklarını değerlendirip alışveriş torbaları üret.~~</span>
+        <span>~~Atık mumlardan yeni mum dök: Kullanılmamış mum artıklarını eritin, doğal yağlarla yeni mumlar yapın.~~</span>
+        <span>~~Cam kavanozları süsleyerek saklama kaplarına dönüştür: Etiketle, süsle ve doğa dostu mutfağını kur.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 1 and result.lights == 5 and result.device == 8 %}
+        <span>~~Kuş Gözlem Günlüğü Tut: Gözlemlediğin kuşları çiz, renklerini yaz, seslerini taklit et.~~</span>
+        <span>~~Yaprak Türlerini Öğren: Meşe mi, çınar mı? Yaprakları topla ve hangi ağaca ait olduklarını araştır.~~</span>
+        <span>~~Çiçek Anatomisi Öğren: Bir çiçeği dikkatle incele: taç yaprak, sap, polen… Her parçasının adını öğren.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 2 and result.lights == 6 and result.device == 9 %}
+        <span>~~Plastik şişelerden kalemlik yap: Renkli ip ve kumaşlarla süsleyerek estetik bir geri dönüşüm ürünü oluştur.~~</span>
+        <span>~~Turunçgil kabuklarından mumluk hazırla: Portakal kabukları + mum + doğa = huzur.~~</span>
+        <span>~~Doğal sabun keseleri dik: Bitmiş sabunları koymak için kese dikebilirsin – sünger gibi kullanılır, israf azalır.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 3 and result.lights == 5 and result.device == 8 %}
+        <span>~~Ay Takvimini Öğren ve Uygula: Ay’ın evrelerini doğada gözlemleyerek etkilerini takip et.~~</span>
+        <span>~~Hayvan İzleri Atlası Oluştur: Gördüğün izleri fotoğraflayıp araştırarak kendi küçük rehberini hazırla.~~</span>
+        <span>~~Ağaçların Yaşını Saymayı Öğren: Ağaç gövdelerini inceleyerek yaş tahmini yapmayı öğren.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 1 and result.lights == 6 and result.device == 7 %}
+        <span>~~Plastik Kaplardan Bitki Saksısı Yap: Şişeleri kes, boyala, içine toprak koy ve bir tohum dik.~~</span>
+        <span>~~“Geri Dönüşüm Yarışı” Oyna: Evdeki çöpleri hızlıca kağıt, plastik ve cam diye ayır. Süre tut, kim daha hızlı?~~</span>
+        <span>~~Atıklardan Heykel Yap: Kapaklar, kartonlar, pipetlerle yaratıcı küçük doğa temalı figürler yap.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 2 and result.lights == 5 and result.device == 9 %}
+        <span>~~Doğadan Toplananlarla Takı Yap: Taş, boncuk, ağaç kabuğu, ip kullanarak kolye ya da bileklik tasarla.~~</span>
+        <span>~~Doğa Günlüğü Tasarla: Yapraklar yapıştır, çizimler ekle, hislerini yaz. Doğada geçen zamanını sakla.~~</span>
+        <span>~~Kokulu Doğal Mum Yap: Doğadan topladığın lavanta, adaçayı gibi bitkilerle özel kokulu mumlar üret.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 3 and result.lights == 6 and result.device == 7 %}
+        <span>~~Evde Geri Dönüşüm Oyunları Oyna: Aileyle birlikte evdeki malzemelerle sıfır atık oyunları kur.~~</span>
+        <span>~~Doğa Temalı Atık Sanatı Yarışması Yap: Evin içinde bulunan geri dönüştürülebilirlerle bir “sergi” oluştur.~~</span>
+        <span>~~Atıklarla Piknik Seti Hazırla: Kullan-at yerine geri dönüşümle hazırlanan çatal, tabak, örtü gibi şeyler tasarla.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 1 and result.lights == 4 and result.device == 8 %}
+        <span>~~Çöp Ayırmayı Öğren: Hangi atık nereye atılır? Renkli kutuları ve sembolleri öğren.~~</span>
+        <span>~~Su Tasarrufu Nasıl Yapılır?: Diş fırçalarken musluğu kapatmak gibi basit alışkanlıkları öğren.~~</span>
+        <span>~~Bitki Ekmenin Doğaya Katkısını Öğren: Bir tohumun büyüyerek doğaya nasıl yardım ettiğini keşfet.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 2 and result.lights == 4 and result.device == 8 %}
+        <span>~~Enerji Verimliliğini Araştır: Evin içinde gereksiz enerji kullanımını azaltmak için neler yapılabilir?~~</span>
+        <span>~~“Sürdürülebilir Yaşam” Nedir?: Geri dönüşüm, doğal kaynak kullanımı ve bilinçli tüketimi öğren.~~</span>
+        <span>~~Kendi Doğa Dostu Temizlik Ürününü Yap: Doğal sabun, sirke ve karbonatla deterjan üretimini öğren.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 3 and result.lights == 5 and result.device == 9 %}
+        <span>~~Doğal Kumaşlardan Piknik Örtüsü Dik: Doğada zaman geçirirken kullanabileceğin estetik ve işlevsel bir ürün hazırla.~~</span>
+        <span>~~Doğa Anı Defteri Hazırla: Her doğa yürüyüşünden sonra hislerini yaz, yaprak veya çiçekler yapıştır.~~</span>
+        <span>~~Doğal Termos Çantası Yap: Atık kumaşlardan termosları saklayacak doğa dostu küçük çanta dik.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 1 and result.lights == 5 and result.device == 7 %}
+        <span>~~Kuşları Çekmek İçin Gözlem Yap: Kuşları görmek için doğada sessizce bekle, gözlemlerini kaydet.~~</span>
+        <span>~~Doğada Dans Et: Ormanın içinde veya parkta müzik eşliğinde özgürce dans et.~~</span>
+        <span>~~Doğa Temalı Bulmaca Çöz: Çeşitli bitkiler ve hayvanlar hakkında yapılmış bulmacaları çöz.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 1 and result.lights == 4 and result.device == 7 %}
+        <span>~~Evde atılacak plastik, kağıt veya kartonlarla kendi doğa kahramanı oyuncağını tasarla.~~</span>
+        <span>~~Kartonlar, kuru dallar, yapraklar ve geri dönüştürülmüş malzemelerle "Doğayı Koru!" temalı afişler yap.~~</span>
+        <span>~~Bir pet şişeyi ya da yoğurt kabını saksı yap, içine toprak koyup tohum ek.Bitkine bir isim ver, bakım günlüğü tut.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 1 and result.lights == 6 and result.device == 9 %}
+        <span>~~Yapraklar, çiçekler, taşlar ve küçük dal parçaları toplayarak kendi doğa günlüğünü hazırla.~~</span>
+        <span>~~Topladığın boncuk gibi taşlar, deniz kabukları, kozalak pulları ya da kuru meyve dilimleriyle bileklik, kolye ya da anahtarlık tasarla.~~</span>
+        <span>~~Atık bir karton kutu, mandal, ip ve biraz kuş yemi kullanarak balkon veya bahçe için minik bir kuş yemliği tasarla.~~</span>
+        <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
+        <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
+        {% elif result.size == 2 and result.lights == 6 and result.device == 8 %}
+        <span>~~Yapraklar, çiçekler, taşlar ve küçük dal parçaları toplayarak kendi doğa günlüğünü hazırla.~~</span>
+        <span>~~Topladığın boncuk gibi taşlar, deniz kabukları, kozalak pulları ya da kuru meyve dilimleriyle bileklik, kolye ya da anahtarlık tasarla.~~</span>
+        <span>~~Atık bir karton kutu, mandal, ip ve biraz kuş yemi kullanarak balkon veya bahçe için minik bir kuş yemliği tasarla.~~</span>
         <span>Bunları her yaptığında,her yeni bir şey öğrendiğinde kendi günlüyüne kayd etmeye ne dersin?</span>
         <a href="{{'http://127.0.0.1:5000'}}" class="main__link">Günlüğüm</a>
         {%endif%}
     </div>
-    {% endblock %}
+    {% endblock %} 
   </main>
   <footer>
 
